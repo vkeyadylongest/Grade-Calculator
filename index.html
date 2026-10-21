@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grade Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="card">
+    <h1>Grade Calculator</h1>
+    <p class="subtitle">Enter three exam scores (0 to 100)</p>
+
+    <label for="score1">Score 1</label>
+    <input type="number" id="score1" placeholder="e.g. 80">
+
+    <label for="score2">Score 2</label>
+    <input type="number" id="score2" placeholder="e.g. 70">
+
+    <label for="score3">Score 3</label>
+    <input type="number" id="score3" placeholder="e.g. 90">
+
+    <button onclick="calculate()">Calculate</button>
+
+    <!-- Shown only when the input is wrong -->
+    <p id="error" class="error hidden"></p>
+
+    <!-- Shown only after a successful calculation -->
+    <div id="results" class="results hidden">
+      <p class="label">Average</p>
+      <p id="averageText" class="average"></p>
+
+      <p class="label">Grade</p>
+      <p id="gradeText" class="grade"></p>
+
+      <p class="label">Status</p>
+      <p id="statusText" class="status"></p>
+    </div>
+  </div>
+
+  <!-- Script goes at the bottom so the elements above already exist -->
+  <script src="script.js"></script>
+</body>
+</html>
